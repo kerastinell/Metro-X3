@@ -19,7 +19,7 @@ find "$root_dir" -mindepth 2 -type d | while read -r cursor_dir; do
     cd "$cursor_dir"
     
     cursor_color=$(basename "$cursor_dir")
-    cursor_type=$(basename `dirname "$cursor_dir"`) # Bold, Light
+    cursor_type=$(basename "`dirname "$cursor_dir"`") # Bold, Light
     
     echo "-> Generating .ico and .xcg files"
     find "$cursor_dir" -type f -name "*.ani" | while read -r "ani_file"; do
